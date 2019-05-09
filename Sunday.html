@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <header id="Title"><H1><img src="CalenderIcon.png">What Day Of The Week Is It?<img src="CalenderIcon.png"></H1></header>
+</head>
+
+<body>
+    <div class="NavBarOuter">
+        <ul id="NavBar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Monday.html">Monday</a></li>
+            <li><a href="Tuesday.html">Tuesday</a></li>
+            <li><a href="Wednesday.html">Wednesday</a></li>
+            <li><a href="Thursday.html">Thursday</a></li>
+            <li><a href="Friday.html">Friday</a></li>
+            <li><a href="Saturday.html">Saturday</a></li>
+            <li><a class="active" href="Sunday.html">Sunday</a></li>
+        </ul>
+    </div>
+    <p id="MainText">The day of the week is</p>
+ 
+    <script>
+        var date = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+            
+        var day = weekday[date.getDay()];
+        if(day == "Sunday"){
+            document.getElementById("MainText").innerHTML = ("Yes, the day is: " + day);
+        }
+        else{
+            document.getElementById("MainText").innerHTML = ("No, the day is not Sunday, the day is: "+day);
+        }
+    </script>
+</body>
+</html>
